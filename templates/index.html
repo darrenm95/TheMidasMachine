@@ -1,13 +1,87 @@
 <!DOCTYPE html>
 <html>
+  <head>
+    <style>
+    .navBar ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      background-color: #333;
+    }
+    
+    .navBar li a {
+      display: block;
+      color: white;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+    }
+    
+    .navBar li a:hover:not(.active) {
+      background-color: #ffffff;
+    }
+    
+    .active {
+      background-color: #4CAF50;
+    }
+    * {
+    box-sizing: border-box;
+    }
+
+    .row {
+      display: flex;
+    }
+
+    /* Create three equal columns that sits next to each other */
+    .column {
+      flex: 33.33%;
+      padding: 5px;
+    }
+  </style>
+  </head>
   <body>
+
+    <div class = "navBar">
+      <ul>
+        <li style="float:left; font-size: 20px;"><a class="active" href="#Stocktracker">Stock Tracker</a></li>
+        <li style="float:right"><a href="#news">News</a></li>
+        <li style="float:right"><a href="#contact">Contact</a></li>
+        <li style="float:right"><a href="#about">About</a></li>
+      </ul>
+    </div>
+
+    <div class = "underTitleContainer row">
+      <img src ="https://via.placeholder.com/1400x300">
+    </div>
+
+    <div class = "stocksHeadline">
+      <h2>Selected stocks</h2>
+      <p>These 3 stocks have been chosen because they are ...</p>
+    </div>
+
+    <div class="row">
+      <div class="column">
+        <img src ="https://via.placeholder.com/300">
+        <p>blablabla</p>
+      </div>
+      <div class="column">
+        <img src ="https://via.placeholder.com/300">
+        <p>blablabla</p>
+      </div>
+      <div class="column">
+        <img src ="https://via.placeholder.com/300">
+        <p>blablabla</p>
+      </div>
+    </div>
+
     <form action="{{ url_for('display_company_name') }}" method="POST">
 
       <label for="ticker">Ticker:</label><br>
       <input type="text" id="ticker" name="ticker" value="Ticker"><br><br>
 
       <input type="submit" value="Submit">
-
+      
     </form> 
   </body>
 </html>
