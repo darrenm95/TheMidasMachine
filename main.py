@@ -5,6 +5,7 @@ app = Flask(__name__)
 @app.route('/', methods=['GET', 'POST'])
 def form():
     return render_template('index.html')
+    
 
 @app.route('/display_company_name', methods=['GET', 'POST'])
 def display_company_name():
