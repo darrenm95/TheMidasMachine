@@ -1,0 +1,57 @@
+.navBar ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      background-color: #cccccc;
+    }
+    
+    .navBar li a {
+      display: block;
+      color: white;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+    }
+    
+    .navBar li a:hover:not(.active) {
+      background-color: #ffffff;
+    }
+    
+    .active {
+      background-color: #4CAF50;
+    }
+    * {
+    box-sizing: border-box;
+    }
+
+    .row {
+      display: flex;
+    }
+
+    /* Create three equal columns that sits next to each other */
+    .column {
+      flex: 33.33%;
+      padding: 5px;
+    }
+%textareas {
+
+	  padding: 12px 20px;
+	  box-sizing: border-box;
+	  border: 2px solid #ccc;
+	  border-radius: 4px;
+	  background-color: #f8f8f8;
+	  font-size: 16px;
+	  resize: none;
+}
+
+.bigTextArea {@extend %textareas;
+	  width: 60%;
+	  height: 150px;
+    float: right;
+}
+.smallTextArea {@extend %textareas;
+	  width: 40%;
+	  height: 30px;
+    float: right;
+}
