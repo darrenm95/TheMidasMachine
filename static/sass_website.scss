@@ -43,15 +43,14 @@
 	  background-color: #f8f8f8;
 	  font-size: 16px;
 	  resize: none;
+    float: right;
 }
 
 .bigTextArea {@extend %textareas;
 	  width: 60%;
 	  height: 150px;
-    float: right;
 }
 .smallTextArea {@extend %textareas;
 	  width: 40%;
 	  height: 30px;
-    float: right;
 }
