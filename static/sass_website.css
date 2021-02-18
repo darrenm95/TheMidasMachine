@@ -1,11 +1,18 @@
+.navBar {
+  /* Create three equal columns that sits next to each other */
+}
 .navBar ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
   overflow: hidden;
   background-color: #cccccc;
+  float: right;
 }
-
+.navBar ul:first-child {
+  float: left;
+  font-size: 20px;
+}
 .navBar li a {
   display: block;
   color: white;
@@ -13,25 +20,15 @@
   padding: 14px 16px;
   text-decoration: none;
 }
-
-.navBar li a:hover:not(.active) {
-  background-color: #ffffff;
-}
-
-.active {
+.navBar .active {
   background-color: #4CAF50;
 }
-
-* {
-  box-sizing: border-box;
-}
-
-.row {
+.navBar .row {
   display: flex;
+  justify-content: center;
+  width: 100%;
 }
-
-/* Create three equal columns that sits next to each other */
-.column {
+.navBar .column {
   flex: 33.33%;
   padding: 5px;
 }
